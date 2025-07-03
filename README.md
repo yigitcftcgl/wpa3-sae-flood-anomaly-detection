@@ -1,7 +1,7 @@
 # wpa3-sae-flood-anomaly-detection
 Machine learning-based anomaly detection system for identifying SAE Commit Flood attacks on WPA3 Wi-Fi networks. Includes PCAP analysis, attack simulation scripts, and detailed Jupyter notebooks for reproducible experiments.
 
-![Modem WPA3 settings](https://github.com/yigitcftcgl/wpa3-sae-flood-anomaly-detection/blob/main/Images/modem_wpa3%20ayar%C4%B1.png)
+![Modem WPA3 settings](https://github.com/yigitcftcgl/wpa3-sae-flood-anomaly-detection/blob/main/Images/modem_wpa3_settings.png)
 
 Within the scope of this project, the target network was first switched from WPA2 to WPA3 Personal mode via the modem interface.
 After this step, Kali Linux was installed on top of the Oracle VirtualBox virtualization software, which would be used to perform the attack. An external Wi-Fi adapter is required to carry out the SAE commit flood. Since Intel Wi-Fi adapters in laptops do not support monitor mode, a TP-Link Archer T2U Plus Wi-Fi adapter was purchased to observe WPA3 attacks and overcome this limitation.
@@ -9,11 +9,11 @@ After this step, Kali Linux was installed on top of the Oracle VirtualBox virtua
 
 During normal traffic, the number of packets slightly exceeds 80 packets per second. Within 145 seconds, a total of 4,686 packets were sent. At the same time, the command ping -c 100 google.com was executed to ping Google.com during normal traffic. The results were approximately around 20 ms.
 
-![Wireshark I/O Graphs: normal_capture-01.cap](https://github.com/yigitcftcgl/wpa3-sae-flood-anomaly-detection/blob/main/Images/normal_an%C4%B1.png)
+![Wireshark I/O Graphs: normal_capture-01.cap](https://github.com/yigitcftcgl/wpa3-sae-flood-anomaly-detection/blob/main/Images/normal_capture.png)
 
 When examining the attack code, it is evident that the traffic differs significantly from the normal_capture. As seen in Figure 16, striking results appear during the attack phase: the packet transmission rate has increased to 1,000 packets per second. Within 132 seconds, a total of 57,148 packets were sent. Additionally, during this process, the command ping -c 100 google.com was executed to ping Google.com. The results increased up to approximately 300 ms.One of the most important observations is that there were significant fluctuations in the ping results during the attack.
 
-![Wireshark I/O Graphs: attack_capture-01.cap](https://github.com/yigitcftcgl/wpa3-sae-flood-anomaly-detection/blob/main/Images/attack_an%C4%B1.png)
+![Wireshark I/O Graphs: attack_capture-01.cap](https://github.com/yigitcftcgl/wpa3-sae-flood-anomaly-detection/blob/main/Images/attack_capture.png)
 
 After carrying out the attack, the final stage of the project—anomaly detection—was performed. In this stage, the objective was to enable the automatic identification of attacks on network traffic captured during both attack and normal conditions, using anomaly detection algorithms.
 
