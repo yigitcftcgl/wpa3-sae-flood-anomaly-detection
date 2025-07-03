@@ -1,0 +1,7 @@
+
+BSSID, First time seen, Last time seen, channel, Speed, Privacy, Cipher, Authentication, Power, # beacons, # IV, LAN IP, ID-length, ESSID, Key
+C2:E3:FB:A3:02:D8, 2025-05-26 17:51:23, 2025-05-26 17:53:28,  2, 360, WPA3 WPA2, CCMP, SAE, -29,     1079,       57,   0.  0.  0.  0,  21, SUPERONLINE_WiFi_82AA, 
+
+Station MAC, First time seen, Last time seen, Power, # packets, BSSID, Probed ESSIDs
+4C:5F:70:0C:59:F9, 2025-05-26 17:53:21, 2025-05-26 17:53:26,  -9,       18, C2:E3:FB:A3:02:D8,
+
